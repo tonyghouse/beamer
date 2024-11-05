@@ -19,7 +19,7 @@ public class DataProcessController {
 
     @PostMapping("/process")
     public ResponseEntity<String> processData(@RequestBody List<Voter> voters) {
-        String result = dataProcessService.processData(voters);
+        String result = dataProcessService.processData();
         return new ResponseEntity<>(result, HttpStatus.OK);
 
     }
